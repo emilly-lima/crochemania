@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  font-family: "Baloo Bhai", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #FEFAEE;
+  font-style: normal;
+}
+
+.amigurumi {
+  -webkit-text-stroke: 0.5px #CA850B;
+}
+
+.chaveiros {
+  -webkit-text-stroke: 0.2px #CA6C6A;
+}
+
+.acessorios {
+  -webkit-text-stroke: 0.5px #677129;
+}
+
+.roupas {
+  -webkit-text-stroke: 0.5px #755FB9;
+}
+
+.bolsas {
+  -webkit-text-stroke: 0.5px #167CAF;
+}
+
+.mali-extralight {
+  font-family: "Mali", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mali-light {
+  font-family: "Mali", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mali-regular {
+  font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mali-medium {
+  font-family: "Mali", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mali-semibold {
+  font-family: "Mali", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mali-bold {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mali-extralight-italic {
+  font-family: "Mali", cursive;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.mali-light-italic {
+  font-family: "Mali", cursive;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.mali-regular-italic {
+  font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.mali-medium-italic {
+  font-family: "Mali", cursive;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.mali-semibold-italic {
+  font-family: "Mali", cursive;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.mali-bold-italic {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  color: #fff;
+  font-family: "Mali", cursive;
+  font-size: clamp(1rem, 1.78vw, 1.5rem);
+  font-weight: 400;
+}
+
+.nav-categorias{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-categorias p {
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: #fff;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.site-header {
+  background: linear-gradient(90deg, #5444AF 50%, #2D2365 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 1.5em 1.5em;
+}
