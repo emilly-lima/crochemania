@@ -5,33 +5,38 @@
 
 body {
   margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-p {
+.titulo-categoria {
   font-family: "Baloo Bhai", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
   color: #FEFAEE;
   font-style: normal;
+  text-align: center;
 }
 
-.amigurumi {
+#amigurumi {
   -webkit-text-stroke: 0.5px #CA850B;
 }
 
-.chaveiros {
+#chaveiros {
   -webkit-text-stroke: 0.2px #CA6C6A;
 }
 
-.acessorios {
+#acessorios {
   -webkit-text-stroke: 0.5px #677129;
 }
 
-.roupas {
+#roupas {
   -webkit-text-stroke: 0.5px #755FB9;
 }
 
-.bolsas {
+#bolsas {
   -webkit-text-stroke: 0.5px #167CAF;
 }
 
@@ -165,4 +170,5 @@ p {
   background: linear-gradient(90deg, #5444AF 50%, #2D2365 100%);
   padding: 1rem 1.5rem;
   border-radius: 0 0 1.5em 1.5em;
+  
 }
