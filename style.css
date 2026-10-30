@@ -1,45 +1,97 @@
-* {
+/* ==========================================================================
+   CROCHÊ MANIA — Folha de Estilos Oficial
+   Design Autoral Original por Emilly Lima
+   Tipografia: "Mali" e "Baloo Bhai"
+   Paleta: Tons roxo/índigo (#5444AF, #2D2365), creme (#FEFAEE) e contornos artesanais
+   ========================================================================== */
+
+/* Reset global e remoção estrita de sublinhados (Bootstrap override) */
+*, *::before, *::after {
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited,
+.brand,
+.brand:hover,
+.nav-list a,
+.nav-list a:hover,
+.nav-categorias a,
+.nav-categorias a:hover,
+.nav-categorias li a,
+.nav-categorias li a:hover,
+.titulo-categoria,
+.titulo-categoria:hover,
+.link-rodape a,
+.link-rodape a:hover,
+.produto-card a,
+.produto-card a:hover,
+.dropdown-item,
+.dropdown-item:hover {
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   1. ESTRUTURA BASE (Conforme especificado originalmente)
+   ========================================================================== */
 body {
   margin: 0;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  min-height: 100vh;
   gap: 1.5rem;
+  background-color: #FAF8F5;
+  color: #333333;
 }
 
+/* ==========================================================================
+   2. TIPOGRAFIA BALOO BHAI & CATEGORIAS (Fidelidade estrita ao design de Emilly)
+   ========================================================================== */
 .titulo-categoria {
   font-family: "Baloo Bhai", sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: #FEFAEE;
+  color: #FEFAEE !important;
   font-style: normal;
   text-align: center;
+  text-decoration: none !important;
+  margin-top: 0.5rem;
 }
 
+/* Contornos artesanais originais (-webkit-text-stroke) com preenchimento #FEFAEE */
 #amigurumi {
   -webkit-text-stroke: 0.5px #CA850B;
+  color: #FEFAEE !important;
 }
 
 #chaveiros {
   -webkit-text-stroke: 0.2px #CA6C6A;
+  color: #FEFAEE !important;
 }
 
 #acessorios {
   -webkit-text-stroke: 0.5px #677129;
+  color: #FEFAEE !important;
 }
 
 #roupas {
   -webkit-text-stroke: 0.5px #755FB9;
+  color: #FEFAEE !important;
 }
 
 #bolsas {
   -webkit-text-stroke: 0.5px #167CAF;
+  color: #FEFAEE !important;
 }
 
+/* ==========================================================================
+   3. CLASSES UTILITÁRIAS DA FONTE MALI (Especificadas no design original)
+   ========================================================================== */
 .mali-extralight {
   font-family: "Mali", cursive;
   font-weight: 200;
@@ -112,6 +164,15 @@ body {
   font-style: italic;
 }
 
+/* ==========================================================================
+   4. HEADER (Conforme especificação original)
+   ========================================================================== */
+.site-header {
+  background: linear-gradient(90deg, #5444AF 50%, #2D2365 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 1.5em 1.5em;
+}
+
 .header-container {
   max-width: 1200px;
   margin-inline: auto;
@@ -122,28 +183,17 @@ body {
 }
 
 .brand {
-  color: #fff;
+  color: #fff !important;
   font-family: "Mali", cursive;
   font-size: clamp(1rem, 1.78vw, 1.5rem);
   font-weight: 400;
-}
-
-.nav-categorias{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-categorias p {
-  text-align: center;
+  text-decoration: none !important;
 }
 
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1.25rem;
   list-style: none;
   margin: 0;
@@ -151,24 +201,336 @@ body {
 }
 
 .nav-list a {
-  color: #fff;
+  color: #fff !important;
+  font-family: "Mali", cursive;
+  font-size: 0.95rem;
+  text-decoration: none !important;
 }
 
-.nav-list a:hover,
-.nav-list a:focus-visible {
-  text-decoration: underline;
+.nav-btn-destaque {
+  background-color: #FEFAEE !important;
+  color: #5444AF !important;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
 }
 
+.usuario-saudacao {
+  color: #FEFAEE;
+  font-family: "Mali", cursive;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Menus Dropdown (Meu Perfil e Administração) com background igual ao header */
+.site-header .dropdown-menu {
+  background: linear-gradient(135deg, #5444AF 0%, #2D2365 100%) !important;
+  background-color: #2D2365 !important;
+  border: 1px solid rgba(254, 250, 238, 0.25) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(45, 35, 101, 0.3) !important;
+  padding: 0.5rem 0 !important;
+  margin-top: 0.5rem !important;
+}
+
+.site-header .dropdown-item {
+  color: #FEFAEE !important;
+  font-family: "Mali", cursive !important;
+  font-size: 0.95rem !important;
+  padding: 0.55rem 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus {
+  background-color: rgba(254, 250, 238, 0.18) !important;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   5. NAVEGAÇÃO DE CATEGORIAS (Conforme especificação original)
+   ========================================================================== */
+.site-categorias {
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.nav-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-categorias li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none !important;
+}
+
+.nav-categorias img {
+  width: auto;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   6. VITRINE DE PRODUTOS (Cards lado a lado com quebra de linha fluida)
+   ========================================================================== */
+.vitrine-produtos {
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.vitrine-titulo {
+  font-family: "Baloo Bhai", sans-serif;
+  color: #2D2365;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.produtos-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.produto-card {
+  flex: 0 1 210px;
+  width: 210px;
+  min-width: 190px;
+  max-width: 230px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  border: 1px solid #ECE8F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.produto-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.produto-nome {
+  font-family: "Mali", cursive;
+  font-weight: 700;
+  color: #2D2365;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.produto-preco {
+  font-family: "Mali", cursive;
+  color: #5444AF;
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.produto-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+   7. FORMULÁRIOS & CARDS DE AUTENTICAÇÃO
+   ========================================================================== */
+.main-container {
+  max-width: 800px;
+  width: 90%;
+  margin: 1.5rem auto 3rem auto;
+  flex: 1;
+}
+
+.card-autenticacao {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid #ECE8F7;
+}
+
+.card-titulo {
+  font-family: "Baloo Bhai", sans-serif;
+  color: #2D2365;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.card-subtitulo {
+  font-family: "Mali", cursive;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  font-family: "Mali", cursive;
+  font-weight: 600;
+  color: #2D2365;
+  font-size: 0.95rem;
+}
+
+.form-input {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #D6D0F0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #FAFAFF;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #5444AF;
+  background-color: #FFFFFF;
+}
+
+/* ==========================================================================
+   8. BOTÕES (Cores consistentes sem saltos de hover)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: "Mali", cursive;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.btn-primario {
+  background: linear-gradient(90deg, #5444AF 0%, #3F318D 100%);
+  color: #FFFFFF !important;
+  width: 100%;
+}
+
+.btn-secundario {
+  background: #ECE8F7;
+  color: #5444AF !important;
+}
+
+.btn-perigo {
+  background: #FFF0F0;
+  color: #D32F2F !important;
+  border: 1.5px solid #FFCDD2;
+}
+
+.link-rodape {
+  font-family: "Mali", cursive;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.link-rodape a {
+  color: #5444AF !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
+   9. PAINEL DO PERFIL & ZONAS
+   ========================================================================== */
+.secao-perfil {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #ECE8F7;
+}
+
+.perfil-info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed #E5E0F5;
+  font-family: "Mali", cursive;
+  font-size: 0.95rem;
+}
+
+.perfil-info-label {
+  font-weight: 600;
+  color: #5444AF;
+}
+
+.perfil-info-valor {
+  color: #333;
+}
+
+.zona-perigo {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #FFF8F8;
+  border-radius: 12px;
+  border: 1px solid #FFDCDC;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ==========================================================================
+   10. RODAPÉ
+   ========================================================================== */
+.site-footer {
+  margin-top: auto;
+  background-color: #2D2365;
+  color: #FEFAEE;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: "Mali", cursive;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   11. RESPONSIVIDADE MOBILE (Conforme especificado originalmente por Emilly)
+   ========================================================================== */
 @media (max-width: 600px) {
   .header-container {
     align-items: flex-start;
     flex-direction: column;
   }
-}
-
-.site-header {
-  background: linear-gradient(90deg, #5444AF 50%, #2D2365 100%);
-  padding: 1rem 1.5rem;
-  border-radius: 0 0 1.5em 1.5em;
-  
+  .card-autenticacao {
+    padding: 1.5rem;
+  }
 }
